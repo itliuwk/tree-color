@@ -12,20 +12,14 @@
               <div class="col-md-4">
                 <div class="checkbox">
                   <label>
-                    <input
-                      type="checkbox"
-                      v-model="horizontal"
-                    > Horizontal
+                    <input type="checkbox" v-model="horizontal" /> Horizontal
                   </label>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="checkbox">
                   <label>
-                    <input
-                      type="checkbox"
-                      v-model="collapsable"
-                    > Collapsable
+                    <input type="checkbox" v-model="collapsable" /> Collapsable
                   </label>
                 </div>
               </div>
@@ -36,20 +30,18 @@
                       type="checkbox"
                       v-model="expandAll"
                       @change="expandChange"
-                    > Expand All
+                    />
+                    Expand All
                   </label>
                 </div>
               </div>
-              <p><br></p>
-              <p><br></p>
+              <p><br /></p>
+              <p><br /></p>
               <div class="col-md-6">
                 <div class="form-group">
                   <label class="control-label col-md-5">labelClassName:</label>
                   <div class="col-md-7">
-                    <select
-                      class="form-control"
-                      v-model="labelClassName"
-                    >
+                    <select class="form-control" v-model="labelClassName">
                       <option value="bg-white">bg-white</option>
                       <option value="bg-orange">bg-orange</option>
                       <option value="bg-gold">bg-gold</option>
@@ -64,9 +56,10 @@
             </form>
           </div>
         </div>
-        <p><br></p>
+        <p><br /></p>
         <div class="text-center">
-          <vue2-org-tree name="test"
+          <vue2-org-tree
+            name="test"
             :data="data"
             :horizontal="horizontal"
             :collapsable="collapsable"
@@ -94,21 +87,21 @@ export default {
             children: [
               {
                 id: 5,
-                label: "研发-前端"
+                label: "研发-前端",
               },
               {
                 id: 6,
-                label: "研发-后端"
+                label: "研发-后端",
               },
               {
                 id: 9,
-                label: "UI设计"
+                label: "UI设计",
               },
               {
                 id: 10,
-                label: "产品经理"
-              }
-            ]
+                label: "产品经理",
+              },
+            ],
           },
           {
             id: 3,
@@ -116,35 +109,35 @@ export default {
             children: [
               {
                 id: 7,
-                label: "销售一部"
+                label: "销售一部",
               },
               {
                 id: 8,
-                label: "销售二部"
-              }
-            ]
+                label: "销售二部",
+              },
+            ],
           },
           {
             id: 4,
-            label: "财务部"
+            label: "财务部",
           },
           {
             id: 9,
-            label: "HR人事"
-          }
-        ]
+            label: "HR人事",
+          },
+        ],
       },
       horizontal: false,
       collapsable: true,
       expandAll: false,
-      labelClassName: "bg-white"
+      labelClassName: "bg-white",
     };
   },
   methods: {
     renderContent(h, data) {
       return data.label;
     },
-    onExpand(e,data) {
+    onExpand(e, data) {
       if ("expand" in data) {
         data.expand = !data.expand;
         if (!data.expand && data.children) {
@@ -155,11 +148,12 @@ export default {
       }
     },
     onNodeClick(e, data) {
-      alert(data.label);
+      console.log(data);
+      // alert(data.label);
     },
     collapse(list) {
       var _this = this;
-      list.forEach(function(child) {
+      list.forEach(function (child) {
         if (child.expand) {
           child.expand = false;
         }
@@ -172,7 +166,7 @@ export default {
     toggleExpand(data, val) {
       var _this = this;
       if (Array.isArray(data)) {
-        data.forEach(function(item) {
+        data.forEach(function (item) {
           _this.$set(item, "expand", val);
           if (item.children) {
             _this.toggleExpand(item.children, val);
@@ -184,8 +178,8 @@ export default {
           _this.toggleExpand(data.children, val);
         }
       }
-    }
-  }
+    },
+  },
 };
 </script>
 <style type="text/css">

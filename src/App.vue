@@ -7,13 +7,13 @@
     <!-- <router-view/> -->
     <div class="flex">
       <Home class="f1" />
-      <About class="f1" />
+      <!-- <About class="f1" /> -->
     </div>
-    <pre>
+    <!-- <pre>
         <code>
           https://github.com/itliuwk/tree-color
         </code>
-      </pre>
+      </pre> -->
   </div>
 </template>
 
