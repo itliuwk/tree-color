@@ -627,9 +627,9 @@ well be called when the node-label clicked
 
 ## 总结
 
-最后附上Git地址：https://github.com/CrazyMrYan/vue-tree-color 
 
-预览地址：http://crazy.lovemysoul.vip/gitdemo/vue-tree-color 
+
+预览地址：http://tree.sxitw.cn/ 
 
 关注“悲伤日记”查看更多精彩文章
 ![](https://user-gold-cdn.xitu.io/2020/3/26/17114de4a8c27045?w=414&h=415&f=png&s=77015)
