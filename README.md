@@ -50,7 +50,7 @@ Vue.use(Vue2OrgTree)
 
 ## 简单起步
 
-严老湿这边呢，就直接使用` Vue-cli `起步了，`vue-tree-color`安装成功之后，我们就直接使用了，在`Vue`页面或者组件中使用`vue2-org-tree` 标签，动态绑定data
+直接使用` Vue-cli `起步了，`vue-tree-color`安装成功之后，我们就直接使用了，在`Vue`页面或者组件中使用`vue2-org-tree` 标签，动态绑定data
 
 ### 基本创建
 
